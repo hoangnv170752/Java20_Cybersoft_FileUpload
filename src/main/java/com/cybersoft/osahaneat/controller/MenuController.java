@@ -9,7 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
+import com.cybersoft.osahaneat.service.imp.*;
 @RestController
 @RequestMapping("/menu")
 public class MenuController {
@@ -27,7 +27,7 @@ public class MenuController {
             @RequestParam int cate_res_id
     ){
         ResponseData responseData = new ResponseData();
-        boolean isSuccess = menuServiceImp.insertFood(file, name, description, price, instruction, cate_res_id)
+        boolean isSuccess = menuServiceImp.insertFood(file, name, description, price, instruction, cate_res_id);
         responseData.setData(isSuccess);
 
         return new ResponseEntity<>(responseData, HttpStatus.OK);

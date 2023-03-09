@@ -104,4 +104,7 @@ public class Food {
     public void setCategoryRestaurant(CategoryRestaurant categoryRestaurant) {
         this.categoryRestaurant = categoryRestaurant;
     }
+
+    public void setInstruction(String instruction) {
+    }
 }
